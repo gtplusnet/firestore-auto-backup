@@ -6,3 +6,4 @@
     --role roles/datastore.importExportAdmin```
 2. ```gsutil iam ch serviceAccount:PROJECT_ID@appspot.gserviceaccount.com:admin \
     gs://geer-mlm.appspot.com```
+3. Deploy by using command ```firebase deploy --only functions:scheduledFirestoreExport```
