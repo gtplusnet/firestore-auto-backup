@@ -14,3 +14,6 @@
     ```
 3. Deploy by using command ```firebase deploy --only functions:scheduledFirestoreExport```
 4. You can test in this link (https://console.cloud.google.com/cloudscheduler)
+
+#### IMPORTING COMMAND
+```gcloud firestore import gs://geer-mlm.appspot.com/{folder_name}```
