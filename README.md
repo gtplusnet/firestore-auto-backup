@@ -18,5 +18,5 @@
 #### IMPORT COMMAND
 ```gcloud firestore import gs://geer-mlm.appspot.com/{folder_name} --async```
 
-### CHECK STATUS
+#### CHECK STATUS
 ```gcloud firestore operations list```
