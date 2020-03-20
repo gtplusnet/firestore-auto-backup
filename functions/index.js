@@ -2,8 +2,12 @@ const functions = require('firebase-functions');
 const firestore = require('@google-cloud/firestore');
 const client = new firestore.v1.FirestoreAdminClient();
 
+// Asia/Manila Time
+var asiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
+asiaTime = new Date(asiaTime);
+
 const projectId = process.env.GCP_PROJECT || process.env.GCLOUD_PROJECT;
-const bucket = `gs://geer-mlm.appspot.com/${ projectId }/${ new Date() }`
+const bucket = `gs://geer-mlm.appspot.com/${ projectId }/${ asiaTime.toLocaleString() }`
 
 exports.scheduledFirestoreExport = functions.pubsub.schedule('every 24 hours').onRun((context) => 
 {
