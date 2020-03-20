@@ -1,12 +1,14 @@
 # firestore-auto-backup
 
 #### INSTRUCTION (Replace all PROJECT_ID)
-1. ```
+1. Run this command on cloud shell (https://console.cloud.google.com/?cloudshell=true)
+    ```
     gcloud projects add-iam-policy-binding PROJECT_ID \
     --member serviceAccount:PROJECT_ID@appspot.gserviceaccount.com \
     --role roles/datastore.importExportAdmin
     ```
-2. ```
+2. Run this command on cloud shell (https://console.cloud.google.com/?cloudshell=true)
+    ```
     gsutil iam ch serviceAccount:PROJECT_ID@appspot.gserviceaccount.com:admin \
     gs://geer-mlm.appspot.com
     ```
