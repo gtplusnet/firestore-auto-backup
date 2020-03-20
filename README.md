@@ -20,3 +20,5 @@
 
 #### CHECK STATUS
 ```gcloud firestore operations list```
+or
+```gcloud firestore operations describe [OPERATION_NAME]```
